@@ -1,0 +1,23 @@
+c:\users\osinachi\source\repos\Piko\Piko\bin\Debug\Piko.exe.config
+c:\users\osinachi\source\repos\Piko\Piko\bin\Debug\Piko.exe
+c:\users\osinachi\source\repos\Piko\Piko\bin\Debug\Piko.pdb
+c:\users\osinachi\source\repos\Piko\Piko\obj\Debug\Piko.csprojResolveAssemblyReference.cache
+c:\users\osinachi\source\repos\Piko\Piko\obj\Debug\Piko.Form1.resources
+c:\users\osinachi\source\repos\Piko\Piko\obj\Debug\Piko.Properties.Resources.resources
+c:\users\osinachi\source\repos\Piko\Piko\obj\Debug\Piko.csproj.GenerateResource.cache
+c:\users\osinachi\source\repos\Piko\Piko\obj\Debug\Piko.csproj.CoreCompileInputs.cache
+c:\users\osinachi\source\repos\Piko\Piko\obj\Debug\Piko.exe
+c:\users\osinachi\source\repos\Piko\Piko\obj\Debug\Piko.pdb
+c:\users\osinachi\source\repos\Piko\Piko\obj\Debug\Piko.SetSpeed.resources
+C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\Piko.exe.config
+C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\Piko.exe
+C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\Piko.pdb
+C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\obj\Debug\Piko.Form1.resources
+C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\obj\Debug\Piko.PictureViewer.resources
+C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\obj\Debug\Piko.Properties.Resources.resources
+C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\obj\Debug\Piko.SetSpeed.resources
+C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\obj\Debug\Piko.csproj.GenerateResource.cache
+C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\obj\Debug\Piko.csproj.CoreCompileInputs.cache
+C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\obj\Debug\Piko.exe
+C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\obj\Debug\Piko.pdb
+C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\obj\Debug\Piko.csprojAssemblyReference.cache

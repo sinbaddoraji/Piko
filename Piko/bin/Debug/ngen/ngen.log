@@ -1,0 +1,382 @@
+﻿To learn about increasing the verbosity of the NGen log files please see http://go.microsoft.com/fwlink/?linkid=210113
+05/18/2018 00:32:44.136 [4892]: Task scheduler requested starting 64-bit task
+05/18/2018 00:32:44.166 [4892]: Task scheduler requested starting 32-bit task
+05/18/2018 00:32:44.883 [4892]: Launching NGen Task, command line: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:460
+05/18/2018 00:32:44.883 [4892]: Launching NGen Task, command line: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:960
+05/18/2018 00:32:45.789 [3208]: NGen Task starting, command line: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:960
+05/18/2018 00:32:47.643 [3208]: Attempting to acquire task lock.
+05/18/2018 00:32:47.788 [3208]: Acquired task lock.
+05/18/2018 00:32:47.996 [6288]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe RemoveTaskDelayStartTrigger /LegacyServiceBehavior 
+05/18/2018 00:32:48.042 [6288]: ngen returning 0x00000000
+05/18/2018 00:32:48.311 [3208]: Executing normal maintenance tasks
+05/18/2018 00:32:48.319 [12424]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe ExecuteQueuedItems /LegacyServiceBehavior 
+05/18/2018 00:33:08.292 [12424]:     Compiling assembly C:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\AddInViews\Microsoft.VisualStudio.Tools.Applications.Runtime.v10.0.dll (CLR v2.0.50727) ...
+05/18/2018 00:33:10.374 [12424]: Microsoft.VisualStudio.Tools.Applications.Runtime.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+05/18/2018 00:33:10.628 [12424]:     Compiling assembly C:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\Contracts\Microsoft.VisualStudio.Tools.Applications.Contract.v10.0.dll (CLR v2.0.50727) ...
+05/18/2018 00:33:10.866 [12424]: Microsoft.VisualStudio.Tools.Applications.Contract.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+05/18/2018 00:33:11.091 [12424]:     Compiling assembly C:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\Contracts\Microsoft.VisualStudio.Tools.Office.Contract.v10.0.dll (CLR v2.0.50727) ...
+05/18/2018 00:33:11.186 [12424]: Microsoft.VisualStudio.Tools.Office.Contract.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+05/18/2018 00:33:11.621 [12424]:     Compiling assembly C:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\HostSideAdapters\Microsoft.VisualStudio.Tools.Applications.HostAdapter.v10.0.dll (CLR v2.0.50727) ...
+05/18/2018 00:33:12.578 [12424]: Microsoft.VisualStudio.Tools.Applications.HostAdapter.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+05/18/2018 00:33:12.802 [12424]:     Compiling assembly C:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\HostSideAdapters\Microsoft.VisualStudio.Tools.Office.Excel.HostAdapter.v10.0.dll (CLR v2.0.50727) ...
+05/18/2018 00:33:13.340 [12424]: Method not found: 'Void Microsoft.Office.Core.DocumentProperties._VtblGap1_4()'. while compiling method token 0x60000ac
+05/18/2018 00:33:13.342 [12424]: Method not found: 'Void Microsoft.Office.Core.DocumentProperty._VtblGap1_1()'. while compiling method token 0x60000ae
+05/18/2018 00:33:13.388 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Worksheet._VtblGap1_2()'. while compiling method token 0x60000f7
+05/18/2018 00:33:13.390 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Worksheet._VtblGap2_3()'. while compiling method token 0x60000f9
+05/18/2018 00:33:13.391 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Worksheet._VtblGap3_4()'. while compiling method token 0x60000fb
+05/18/2018 00:33:13.393 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Worksheet._VtblGap4_21()'. while compiling method token 0x60000fe
+05/18/2018 00:33:13.394 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Worksheet._VtblGap5_11()'. while compiling method token 0x6000100
+05/18/2018 00:33:13.396 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Worksheet._VtblGap6_89()'. while compiling method token 0x6000102
+05/18/2018 00:33:13.397 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Worksheet._VtblGap7_1()'. while compiling method token 0x6000104
+05/18/2018 00:33:13.401 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Application._VtblGap1_29()'. while compiling method token 0x600010c
+05/18/2018 00:33:13.405 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Application._VtblGap2_7()'. while compiling method token 0x600010e
+05/18/2018 00:33:13.406 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Application._VtblGap3_5()'. while compiling method token 0x6000110
+05/18/2018 00:33:13.412 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Application._VtblGap4_68()'. while compiling method token 0x6000112
+05/18/2018 00:33:13.413 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Chart._VtblGap1_2()'. while compiling method token 0x6000115
+05/18/2018 00:33:13.415 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Workbook._VtblGap1_33()'. while compiling method token 0x600011b
+05/18/2018 00:33:13.416 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Workbook._VtblGap2_26()'. while compiling method token 0x600011d
+05/18/2018 00:33:13.417 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Workbook._VtblGap3_134()'. while compiling method token 0x600011f
+05/18/2018 00:33:13.419 [12424]: Method not found: 'Void Microsoft.Office.Interop.Excel._Workbook._VtblGap4_30()'. while compiling method token 0x6000121
+05/18/2018 00:33:13.571 [12424]: Microsoft.VisualStudio.Tools.Office.Excel.HostAdapter.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+05/18/2018 00:33:13.777 [12424]:     Compiling assembly C:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\HostSideAdapters\Microsoft.VisualStudio.Tools.Office.HostAdapter.v10.0.dll (CLR v2.0.50727) ...
+05/18/2018 00:33:16.804 [12424]: Method not found: 'Void Microsoft.Office.Core._CustomTaskPane._VtblGap1_1()'. while compiling method token 0x6000084
+05/18/2018 00:33:16.807 [12424]: Method not found: 'Void Microsoft.Office.Core._CustomTaskPane._VtblGap2_1()'. while compiling method token 0x6000088
+05/18/2018 00:33:16.810 [12424]: Method not found: 'Void Microsoft.Office.Core._CustomXMLPart._VtblGap1_9()'. while compiling method token 0x6000092
+05/18/2018 00:33:16.812 [12424]: Method not found: 'Void Microsoft.Office.Core._CustomXMLPart._VtblGap2_1()'. while compiling method token 0x6000094
+05/18/2018 00:33:16.812 [12424]: Method not found: 'Void Microsoft.Office.Core._CustomXMLParts._VtblGap1_3()'. while compiling method token 0x6000096
+05/18/2018 00:33:16.814 [12424]: Method not found: 'Void Microsoft.Office.Core._CustomXMLParts._VtblGap2_1()'. while compiling method token 0x6000099
+05/18/2018 00:33:17.117 [12424]: Microsoft.VisualStudio.Tools.Office.HostAdapter.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+05/18/2018 00:33:17.262 [12424]:     Compiling assembly C:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\HostSideAdapters\Microsoft.VisualStudio.Tools.Office.Outlook.HostAdapter.v10.0.dll (CLR v2.0.50727) ...
+05/18/2018 00:33:17.351 [12424]: Method not found: 'Void Microsoft.Office.Interop.Outlook._Application._VtblGap1_15()'. while compiling method token 0x6000015
+05/18/2018 00:33:17.690 [12424]: Microsoft.VisualStudio.Tools.Office.Outlook.HostAdapter.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+05/18/2018 00:33:17.852 [12424]:     Compiling assembly C:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\HostSideAdapters\Microsoft.VisualStudio.Tools.Office.Word.HostAdapter.v10.0.dll (CLR v2.0.50727) ...
+05/18/2018 00:33:18.842 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word._Document._VtblGap1_1()'. while compiling method token 0x600010d
+05/18/2018 00:33:18.843 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word._Document._VtblGap2_3()'. while compiling method token 0x600010f
+05/18/2018 00:33:18.845 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word._Document._VtblGap3_1()'. while compiling method token 0x6000111
+05/18/2018 00:33:18.846 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word._Document._VtblGap4_39()'. while compiling method token 0x6000113
+05/18/2018 00:33:18.848 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word._Document._VtblGap5_1()'. while compiling method token 0x6000116
+05/18/2018 00:33:18.849 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word._Document._VtblGap6_23()'. while compiling method token 0x6000118
+05/18/2018 00:33:18.851 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word._Document._VtblGap7_6()'. while compiling method token 0x600011a
+05/18/2018 00:33:18.852 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word._Document._VtblGap8_223()'. while compiling method token 0x600011c
+05/18/2018 00:33:18.854 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word._Document._VtblGap9_33()'. while compiling method token 0x600011f
+05/18/2018 00:33:18.857 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word._Document._VtblGap10_19()'. while compiling method token 0x6000122
+05/18/2018 00:33:18.859 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word._Document._VtblGap11_13()'. while compiling method token 0x6000124
+05/18/2018 00:33:18.866 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Bookmark._VtblGap1_2()'. while compiling method token 0x600016f
+05/18/2018 00:33:18.869 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Bookmark._VtblGap2_6()'. while compiling method token 0x6000174
+05/18/2018 00:33:18.869 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Bookmarks._VtblGap1_1()'. while compiling method token 0x6000176
+05/18/2018 00:33:18.870 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Bookmarks._VtblGap2_7()'. while compiling method token 0x6000178
+05/18/2018 00:33:18.873 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.ContentControl._VtblGap1_3()'. while compiling method token 0x600017b
+05/18/2018 00:33:18.874 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.ContentControl._VtblGap2_5()'. while compiling method token 0x600017d
+05/18/2018 00:33:18.876 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.ContentControl._VtblGap3_2()'. while compiling method token 0x6000180
+05/18/2018 00:33:18.877 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.ContentControl._VtblGap4_12()'. while compiling method token 0x6000182
+05/18/2018 00:33:18.878 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.ContentControl._VtblGap5_9()'. while compiling method token 0x6000184
+05/18/2018 00:33:18.878 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.ContentControls._VtblGap1_6()'. while compiling method token 0x6000186
+05/18/2018 00:33:18.882 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.InlineShape._VtblGap1_5()'. while compiling method token 0x6000190
+05/18/2018 00:33:18.883 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.InlineShape._VtblGap2_2()'. while compiling method token 0x6000192
+05/18/2018 00:33:18.884 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.InlineShape._VtblGap3_18()'. while compiling method token 0x6000194
+05/18/2018 00:33:18.885 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.InlineShapes._VtblGap1_3()'. while compiling method token 0x6000196
+05/18/2018 00:33:18.885 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.InlineShapes._VtblGap3_1()'. while compiling method token 0x6000198
+05/18/2018 00:33:18.888 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.InlineShapes._VtblGap2_1()'. while compiling method token 0x600019b
+05/18/2018 00:33:18.889 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.OLEFormat._VtblGap1_15()'. while compiling method token 0x600019d
+05/18/2018 00:33:18.893 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Range._VtblGap1_2()'. while compiling method token 0x60001a2
+05/18/2018 00:33:18.894 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Range._VtblGap2_25()'. while compiling method token 0x60001a7
+05/18/2018 00:33:18.895 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Range._VtblGap3_48()'. while compiling method token 0x60001a9
+05/18/2018 00:33:18.896 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Range._VtblGap4_114()'. while compiling method token 0x60001ab
+05/18/2018 00:33:18.898 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Range._VtblGap5_9()'. while compiling method token 0x60001ad
+05/18/2018 00:33:18.899 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Selection._VtblGap1_50()'. while compiling method token 0x60001af
+05/18/2018 00:33:18.902 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Selection._VtblGap2_17()'. while compiling method token 0x60001b1
+05/18/2018 00:33:18.903 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Shape._VtblGap1_20()'. while compiling method token 0x60001b3
+05/18/2018 00:33:18.905 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Shape._VtblGap2_26()'. while compiling method token 0x60001b6
+05/18/2018 00:33:18.906 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Shape._VtblGap3_3()'. while compiling method token 0x60001b8
+05/18/2018 00:33:18.907 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Shapes._VtblGap1_3()'. while compiling method token 0x60001ba
+05/18/2018 00:33:18.907 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Shapes._VtblGap2_1()'. while compiling method token 0x60001bc
+05/18/2018 00:33:18.909 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Shapes._VtblGap3_14()'. while compiling method token 0x60001be
+05/18/2018 00:33:18.911 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.Window._VtblGap1_6()'. while compiling method token 0x60001c0
+05/18/2018 00:33:18.914 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.XMLNode._VtblGap1_2()'. while compiling method token 0x60001c4
+05/18/2018 00:33:18.915 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.XMLNode._VtblGap2_6()'. while compiling method token 0x60001c6
+05/18/2018 00:33:18.917 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.XMLNode._VtblGap3_2()'. while compiling method token 0x60001c8
+05/18/2018 00:33:18.918 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.XMLNode._VtblGap4_1()'. while compiling method token 0x60001ca
+05/18/2018 00:33:18.920 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.XMLNode._VtblGap5_13()'. while compiling method token 0x60001cc
+05/18/2018 00:33:18.920 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.XMLNodes._VtblGap1_1()'. while compiling method token 0x60001ce
+05/18/2018 00:33:18.921 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.XMLNodes._VtblGap2_3()'. while compiling method token 0x60001d0
+05/18/2018 00:33:18.923 [12424]: Method not found: 'Void Microsoft.Office.Interop.Word.XMLSchemaReferences._VtblGap1_17()'. while compiling method token 0x60001d3
+05/18/2018 00:33:18.925 [12424]: Method not found: 'Void Microsoft.Office.Core.DocumentProperty._VtblGap1_1()'. while compiling method token 0x60001d5
+05/18/2018 00:33:19.297 [12424]: Microsoft.VisualStudio.Tools.Office.Word.HostAdapter.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+05/18/2018 00:33:31.888 [12424]:     Compiling assembly Microsoft.VisualStudio.Tools.Applications.AddInAdapter.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v2.0.50727) ...
+05/18/2018 00:33:32.490 [12424]: Microsoft.VisualStudio.Tools.Applications.AddInAdapter.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+05/18/2018 00:33:33.284 [12424]:     Compiling assembly Microsoft.VisualStudio.Tools.Applications.Hosting.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v2.0.50727) ...
+05/18/2018 00:33:36.949 [12424]: Microsoft.VisualStudio.Tools.Applications.Hosting.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+05/18/2018 00:33:38.042 [12424]:     Compiling assembly Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v2.0.50727) ...
+05/18/2018 00:33:41.681 [12424]: Microsoft.VisualStudio.Tools.Applications.ServerDocument.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a <debug>
+05/18/2018 00:33:42.698 [12424]: Failed to load dependency Microsoft.VisualStudio.OLE.Interop of assembly Microsoft.VisualStudio.Tools.Office.ContainerControl.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a because of the following error : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+05/18/2018 00:33:42.736 [12424]:     Compiling assembly Microsoft.VisualStudio.Tools.Office.ContainerControl.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v2.0.50727) ...
+05/18/2018 00:33:43.708 [12424]: Warning: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified.
+File name: 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+05/18/2018 00:33:43.709 [12424]:  while resolving 0x2000015 - MessageFilterHook.Microsoft.VisualStudio.OfficeTools.Controls.
+05/18/2018 00:33:43.789 [12424]: Warning: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified.
+File name: 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+05/18/2018 00:33:43.790 [12424]:  while resolving 0x1000006 - Microsoft.VisualStudio.OLE.Interop.IServiceProvider.
+05/18/2018 00:33:44.086 [12424]: Warning: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified.
+File name: 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+05/18/2018 00:33:44.087 [12424]:  while resolving 0xa000001 - Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService.
+05/18/2018 00:33:45.114 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) while compiling method token 0x6000076
+05/18/2018 00:33:45.238 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) while compiling method token 0x6000077
+05/18/2018 00:33:45.239 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) while compiling method token 0x6000078
+05/18/2018 00:33:45.240 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) while compiling method token 0x6000079
+05/18/2018 00:33:45.241 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) while compiling method token 0x600007a
+05/18/2018 00:33:45.242 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) while compiling method token 0x600007b
+05/18/2018 00:33:45.243 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) while compiling method token 0x600007c
+05/18/2018 00:33:45.244 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) while compiling method token 0x600007d
+05/18/2018 00:33:45.246 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) while compiling method token 0x600007e
+05/18/2018 00:33:45.246 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) while compiling method token 0x600007f
+05/18/2018 00:33:45.247 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) while compiling method token 0x6000080
+05/18/2018 00:33:45.249 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) while compiling method token 0x6000081
+05/18/2018 00:33:46.025 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. while compiling method VSTOContainerControl.EnsureMessageFilterHook
+05/18/2018 00:33:46.130 [12424]: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. while compiling method VSTOContainerControl.UninstallMessageFilterHook
+05/18/2018 00:33:46.904 [12424]: Microsoft.VisualStudio.Tools.Office.ContainerControl.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+05/18/2018 00:33:46.995 [12424]: Failed to load dependency Microsoft.VisualStudio.OLE.Interop of assembly Microsoft.VisualStudio.Tools.Office.ContainerControl.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a because of the following error : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+05/18/2018 00:33:48.283 [12424]:     Compiling assembly Microsoft.VisualStudio.Tools.Office.Runtime.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v2.0.50727) ...
+05/18/2018 00:33:50.819 [12424]: Microsoft.VisualStudio.Tools.Office.Runtime.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+05/18/2018 00:35:05.161 [12424]: Failed to load dependency System.Runtime.Loader of assembly Microsoft.CodeAnalysis.Scripting, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35 because of the following error : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+05/18/2018 00:35:52.419 [12424]: Failed to load dependency Microsoft.VisualStudio.DesignTools.WpfTap of assembly WpfSurface, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a because of the following error : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+05/18/2018 00:35:59.430 [4892]: Task scheduler requested stopping 64-bit task
+05/18/2018 00:35:59.466 [3208]: Task was interrupted by task scheduler
+05/18/2018 00:36:00.360 [4892]: Task completed with status 0
+05/18/2018 00:36:00.361 [4892]: Stopped 64-bit task
+05/18/2018 00:36:00.362 [4892]: Task scheduler requested stopping 32-bit task
+05/18/2018 00:36:01.541 [4892]: Task completed with status 0
+05/18/2018 00:36:01.541 [4892]: Stopped 32-bit task
+05/18/2018 15:04:18.346 [2268]: Setting MSI handle, install logging will go into the MSI log
+05/18/2018 20:49:08.020 [27500]: Setting MSI handle, install logging will go into the MSI log
+05/18/2018 20:49:47.056 [18848]: Command line: c:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install c:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\AddInSideAdapters\Microsoft.VisualStudio.Tools.Applications.AddInAdapter.v9.0.dll /queue:3 /NoDependencies 
+05/18/2018 20:49:47.131 [18848]: ngen returning 0x00000000
+05/18/2018 20:49:47.216 [20448]: Command line: c:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install c:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\AddInViews\Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0.dll /queue:3 /NoDependencies 
+05/18/2018 20:49:47.242 [20448]: ngen returning 0x00000000
+05/18/2018 20:49:47.317 [24260]: Command line: c:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install c:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\Contracts\Microsoft.VisualStudio.Tools.Applications.Contract.v9.0.dll /queue:3 /NoDependencies 
+05/18/2018 20:49:47.347 [24260]: ngen returning 0x00000000
+05/18/2018 20:49:47.422 [19812]: Command line: c:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install c:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\AddInSideAdapters\Microsoft.VisualStudio.Tools.Office.AddInAdapter.v9.0.dll /queue:3 /NoDependencies 
+05/18/2018 20:49:47.436 [19812]: ngen returning 0x00000000
+05/18/2018 20:49:47.510 [23684]: Command line: c:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install c:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\Contracts\Microsoft.VisualStudio.Tools.Office.Contract.v9.0.dll /queue:3 /NoDependencies 
+05/18/2018 20:49:47.527 [23684]: ngen returning 0x00000000
+05/18/2018 20:49:47.610 [14332]: Command line: c:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install c:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\AddInSideAdapters\Microsoft.VisualStudio.Tools.Office.Excel.AddInAdapter.v9.0.dll /queue:3 /NoDependencies 
+05/18/2018 20:49:47.626 [14332]: ngen returning 0x00000000
+05/18/2018 20:49:47.692 [23568]: Command line: c:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install c:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\AddInSideAdapters\Microsoft.VisualStudio.Tools.Office.Word.AddInAdapter.v9.0.dll /queue:3 /NoDependencies 
+05/18/2018 20:49:47.727 [23568]: ngen returning 0x00000000
+05/18/2018 20:49:47.858 [21844]: Command line: c:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install c:\Program Files (x86)\Common Files\Microsoft Shared\VSTA\Pipeline.v10.0\AddInViews\Microsoft.Office.Tools.v9.0.dll /queue:3 /NoDependencies 
+05/18/2018 20:49:47.889 [21844]: ngen returning 0x00000000
+05/18/2018 20:49:48.614 [23864]: Command line: c:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\ngen.exe update /queue 
+05/18/2018 20:49:49.568 [23864]: ngen returning 0x00000000
+05/19/2018 00:12:48.630 [28548]: Setting MSI handle, install logging will go into the MSI log
+05/19/2018 15:26:59.402 [23660]: Task scheduler requested starting 32-bit task
+05/19/2018 15:26:59.403 [23660]: Task scheduler requested starting 64-bit task
+05/19/2018 15:26:59.437 [23660]: Launching NGen Task, command line: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:492
+05/19/2018 15:26:59.437 [23660]: Launching NGen Task, command line: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:456
+05/19/2018 15:26:59.630 [27792]: NGen Task starting, command line: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:456
+05/19/2018 15:26:59.974 [27792]: Attempting to acquire task lock.
+05/19/2018 15:27:00.006 [27792]: Acquired task lock.
+05/19/2018 15:27:00.059 [15448]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe RemoveTaskDelayStartTrigger /LegacyServiceBehavior 
+05/19/2018 15:27:00.473 [15448]: ngen returning 0x00000000
+05/19/2018 15:27:05.788 [27792]: Executing high priority queued items
+05/19/2018 15:27:05.798 [23820]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe ExecuteQueuedItems 2 /LegacyServiceBehavior 
+05/19/2018 15:27:05.926 [23820]: All compilation targets are up to date.
+05/19/2018 15:27:05.927 [23820]: ngen returning 0x00000000
+05/19/2018 15:27:05.929 [27792]: Finished high priority work.  Checking for new work added after we started
+05/19/2018 15:27:05.940 [30196]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe RemoveTaskBootTrigger /LegacyServiceBehavior 
+05/19/2018 15:27:06.160 [30196]: ngen returning 0x00000000
+05/19/2018 15:27:06.164 [27792]: High-priority NGen task completed successfully
+05/19/2018 15:27:06.294 [23660]: Task completed with status -2147020576
+05/19/2018 15:27:06.417 [23660]: Task completed with status -2147020576
+05/19/2018 15:27:07.202 [31216]: Task scheduler requested starting 64-bit task
+05/19/2018 15:27:07.203 [31216]: Task scheduler requested starting 32-bit task
+05/19/2018 15:27:07.207 [31216]: Launching NGen Task, command line: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:468
+05/19/2018 15:27:07.208 [31216]: Launching NGen Task, command line: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:364
+05/19/2018 15:27:07.254 [31208]: NGen Task starting, command line: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:468
+05/19/2018 15:27:07.277 [31208]: Attempting to acquire task lock.
+05/19/2018 15:27:07.279 [31208]: Acquired task lock.
+05/19/2018 15:27:07.295 [31072]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe RemoveTaskDelayStartTrigger /LegacyServiceBehavior 
+05/19/2018 15:27:07.310 [31072]: ngen returning 0x00000000
+05/19/2018 15:27:07.321 [31208]: Executing normal maintenance tasks
+05/19/2018 15:27:07.333 [30212]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe ExecuteQueuedItems /LegacyServiceBehavior 
+05/19/2018 15:27:36.007 [30212]: Failed to load dependency Microsoft.VisualStudio.OLE.Interop of assembly Microsoft.VisualStudio.Tools.Office.ContainerControl.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a because of the following error : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+05/19/2018 15:27:36.134 [30212]: Failed to load dependency Microsoft.VisualStudio.OLE.Interop of assembly Microsoft.VisualStudio.Tools.Office.ContainerControl.v10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a because of the following error : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+05/19/2018 15:29:22.007 [30212]: Failed to load dependency System.Runtime.Loader of assembly Microsoft.CodeAnalysis.Scripting, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35 because of the following error : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+05/19/2018 15:30:18.288 [30212]: Failed to load dependency Microsoft.VisualStudio.DesignTools.WpfTap of assembly WpfSurface, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a because of the following error : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+05/19/2018 15:30:27.838 [30212]: Failed to load dependency Microsoft.VisualStudio.Setup.Configuration.Interop of assembly MSBuildTaskHost, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a because of the following error : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+05/19/2018 15:30:45.734 [30212]: Failed to load dependency System.Runtime.Loader of assembly Microsoft.CodeAnalysis.Scripting, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35 because of the following error : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+05/19/2018 15:31:31.680 [30212]: Failed to load dependency Newtonsoft.Json of assembly Microsoft.TemplateEngine.Edge, Version=0.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 because of the following error : The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+05/19/2018 15:31:33.003 [30212]: Failed to load dependency Newtonsoft.Json of assembly Microsoft.TemplateEngine.Orchestrator.RunnableProjects, Version=0.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 because of the following error : The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+05/19/2018 15:31:38.845 [30212]: Failed to load dependency PaintDotNet.SystemLayer.Native.x86 of assembly PaintDotNet.SystemLayer, Version=4.21.6589.7045, Culture=neutral, PublicKeyToken=null because of the following error : An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+05/19/2018 15:31:39.739 [30212]: Failed to load dependency PaintDotNet.SystemLayer.Native.x86 of assembly PaintDotNet.SystemLayer, Version=4.21.6589.7045, Culture=neutral, PublicKeyToken=null because of the following error : An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+05/19/2018 15:31:40.090 [30212]: Failed to load dependency PaintDotNet.SystemLayer.Native.x86 of assembly PaintDotNet.SystemLayer, Version=4.21.6589.7045, Culture=neutral, PublicKeyToken=null because of the following error : An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+05/19/2018 15:31:41.061 [30212]: Failed to load dependency PaintDotNet.SystemLayer.Native.x86 of assembly PaintDotNet.SystemLayer, Version=4.21.6589.7045, Culture=neutral, PublicKeyToken=null because of the following error : An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+05/19/2018 15:31:41.176 [30212]: Failed to load dependency PaintDotNet.SystemLayer.Native.x86 of assembly PaintDotNet.SystemLayer, Version=4.21.6589.7045, Culture=neutral, PublicKeyToken=null because of the following error : An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+05/19/2018 15:31:41.271 [30212]: Failed to load dependency PaintDotNet.SystemLayer.Native.x86 of assembly PaintDotNet.SystemLayer, Version=4.21.6589.7045, Culture=neutral, PublicKeyToken=null because of the following error : An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+05/19/2018 15:31:41.331 [30212]: Failed to load dependency PaintDotNet.SystemLayer.Native.x86 of assembly PaintDotNet.SystemLayer, Version=4.21.6589.7045, Culture=neutral, PublicKeyToken=null because of the following error : An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+05/19/2018 15:31:44.544 [30212]: 1>    Compiling assembly Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:31:45.663 [30212]: 1>    Compiling assembly Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:31:48.404 [30212]: 1>    Compiling assembly Microsoft.Office.Tools.Common.Implementation, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:31:54.672 [30212]: 1>    Compiling assembly Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:31:55.570 [30212]: 1>    Compiling assembly Microsoft.Office.Tools.Excel.Implementation, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:31:58.075 [30212]: 1>    Compiling assembly Microsoft.Office.Tools.Outlook, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:31:58.715 [30212]: 1>    Compiling assembly Microsoft.Office.Tools.Outlook.Implementation, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:31:59.622 [30212]: 1>    Compiling assembly Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:31:59.994 [30212]: 1>    Compiling assembly Microsoft.Office.Tools.Word, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:32:01.071 [30212]: 1>    Compiling assembly Microsoft.Office.Tools.Word.Implementation, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:32:06.626 [30212]: 1>    Compiling assembly Microsoft.VisualStudio.Tools.Applications.Hosting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:32:09.118 [30212]: 1>    Compiling assembly Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:32:09.631 [30212]: 1>    Compiling assembly Microsoft.VisualStudio.Tools.Applications.ServerDocument, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:32:11.176 [30212]: Failed to load dependency Microsoft.VisualStudio.OLE.Interop of assembly Microsoft.VisualStudio.Tools.Office.ContainerControl, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a because of the following error : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+05/19/2018 15:32:11.214 [30212]: 1>    Compiling assembly Microsoft.VisualStudio.Tools.Office.ContainerControl, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:32:11.527 [30212]: 1>Warning: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. while resolving 0x2000015 - Microsoft.VisualStudio.OfficeTools.Controls.MessageFilterHook.
+05/19/2018 15:32:11.529 [30212]: 1>Warning: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. while resolving 0x1000006 - Microsoft.VisualStudio.OLE.Interop.IServiceProvider.
+05/19/2018 15:32:11.608 [30212]: 1>Warning: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. while resolving 0xa000001 - Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService.
+05/19/2018 15:32:11.611 [30212]: 1>Warning: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified. (Exception from HRESULT: 0x80070002). If this assembly is found during runtime of an application, then the native image currently being generated will not be used.
+05/19/2018 15:32:11.738 [30212]: 1>Warning: System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified.. If this assembly is found during runtime of an application, then the native image currently being generated will not be used.
+05/19/2018 15:32:12.437 [30212]: Failed to load dependency Microsoft.VisualStudio.OLE.Interop of assembly Microsoft.VisualStudio.Tools.Office.ContainerControl, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a because of the following error : The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+05/19/2018 15:32:12.619 [30212]: 1>    Compiling assembly Microsoft.VisualStudio.Tools.Office.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:32:13.477 [30212]: 1>    Compiling assembly Microsoft.VisualStudio.Tools.Office.Runtime.Internal, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a (CLR v4.0.30319) ...
+05/19/2018 15:32:23.319 [30212]: ngen returning 0x00000000
+05/19/2018 15:32:29.532 [28912]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install C:\WINDOWS\system32\WinMetadata\Windows.UI.winmd /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/19/2018 15:38:13.687 [28912]: All compilation targets are up to date.
+05/19/2018 15:38:13.702 [28912]: ngen returning 0x00000000
+05/19/2018 15:38:13.728 [36548]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install C:\WINDOWS\system32\WinMetadata\Windows.Foundation.winmd /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/19/2018 15:38:13.798 [36548]: All compilation targets are up to date.
+05/19/2018 15:38:13.798 [36548]: ngen returning 0x00000000
+05/19/2018 15:38:13.811 [36596]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.Runtime.InteropServices.WindowsRuntime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/19/2018 15:38:13.885 [36596]: All compilation targets are up to date.
+05/19/2018 15:38:13.885 [36596]: ngen returning 0x00000000
+05/19/2018 15:38:13.896 [36624]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/19/2018 15:38:14.081 [36624]: All compilation targets are up to date.
+05/19/2018 15:38:14.081 [36624]: ngen returning 0x00000000
+05/19/2018 15:38:14.095 [36712]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install C:\WINDOWS\system32\WinMetadata\Windows.ApplicationModel.winmd /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/19/2018 15:38:14.310 [36712]: All compilation targets are up to date.
+05/19/2018 15:38:14.310 [36712]: ngen returning 0x00000000
+05/19/2018 15:38:14.327 [31140]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.ObjectModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/19/2018 15:38:14.391 [31140]: All compilation targets are up to date.
+05/19/2018 15:38:14.391 [31140]: ngen returning 0x00000000
+05/19/2018 15:38:14.403 [31536]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.Text.Encoding, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/19/2018 15:38:14.487 [31536]: All compilation targets are up to date.
+05/19/2018 15:38:14.487 [31536]: ngen returning 0x00000000
+05/19/2018 15:38:14.504 [36812]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.Runtime.InteropServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/19/2018 15:38:14.752 [36812]: All compilation targets are up to date.
+05/19/2018 15:38:14.752 [36812]: ngen returning 0x00000000
+05/19/2018 15:38:14.769 [35872]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.Resources.ResourceManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/19/2018 15:38:14.867 [35872]: All compilation targets are up to date.
+05/19/2018 15:38:14.867 [35872]: ngen returning 0x00000000
+05/19/2018 15:38:14.886 [35900]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/19/2018 15:38:16.195 [35900]: All compilation targets are up to date.
+05/19/2018 15:38:16.195 [35900]: ngen returning 0x00000000
+05/19/2018 15:38:17.732 [31208]: Exception while parsing log HRESULT(-2146232832)
+05/19/2018 15:38:17.746 [31208]: Exception while parsing log HRESULT(-2146232832)
+05/19/2018 15:38:17.763 [31208]: Exception while parsing log HRESULT(-2146232832)
+05/19/2018 15:38:17.780 [31208]: Exception while parsing log HRESULT(-2146232832)
+05/19/2018 15:38:17.801 [31208]: Exception while parsing log HRESULT(-2146232832)
+05/19/2018 15:38:17.802 [31208]: Exception while parsing log HRESULT(-2146232832)
+05/19/2018 15:38:17.908 [31208]: Exception while parsing log HRESULT(-2146232832)
+05/19/2018 15:38:17.939 [31208]: Exception while parsing log HRESULT(-2146232832)
+05/19/2018 15:38:17.950 [31208]: Exception while parsing log HRESULT(-2146232832)
+05/19/2018 15:38:18.540 [31208]: NGen task completed successfully
+05/19/2018 15:38:18.607 [31216]: Task completed with status 0
+05/19/2018 15:38:18.880 [31216]: Task completed with status 0
+05/20/2018 17:11:42.224 [50520]: Task scheduler requested starting 32-bit task
+05/20/2018 17:11:42.225 [50520]: Task scheduler requested starting 64-bit task
+05/20/2018 17:11:42.445 [50520]: Launching NGen Task, command line: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:500
+05/20/2018 17:11:42.446 [50520]: Launching NGen Task, command line: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:988
+05/20/2018 17:11:43.022 [41692]: NGen Task starting, command line: "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:988
+05/20/2018 17:11:43.920 [41692]: Attempting to acquire task lock.
+05/20/2018 17:11:43.937 [41692]: Acquired task lock.
+05/20/2018 17:11:44.046 [3312]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe RemoveTaskDelayStartTrigger /LegacyServiceBehavior 
+05/20/2018 17:11:44.090 [3312]: ngen returning 0x00000000
+05/20/2018 17:11:44.473 [41692]: Executing normal maintenance tasks
+05/20/2018 17:11:44.484 [40344]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe ExecuteQueuedItems /LegacyServiceBehavior 
+05/20/2018 17:11:47.254 [40344]: All compilation targets are up to date.
+05/20/2018 17:11:47.255 [40344]: ngen returning 0x00000000
+05/20/2018 17:11:53.716 [43700]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install C:\WINDOWS\system32\WinMetadata\Windows.UI.winmd /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/20/2018 17:12:02.853 [43700]: All compilation targets are up to date.
+05/20/2018 17:12:02.853 [43700]: ngen returning 0x00000000
+05/20/2018 17:12:02.886 [44916]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install C:\WINDOWS\system32\WinMetadata\Windows.Foundation.winmd /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/20/2018 17:12:02.950 [44916]: All compilation targets are up to date.
+05/20/2018 17:12:02.950 [44916]: ngen returning 0x00000000
+05/20/2018 17:12:02.962 [32136]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.Runtime.InteropServices.WindowsRuntime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/20/2018 17:12:03.032 [32136]: All compilation targets are up to date.
+05/20/2018 17:12:03.032 [32136]: ngen returning 0x00000000
+05/20/2018 17:12:03.044 [14032]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/20/2018 17:12:03.620 [14032]: All compilation targets are up to date.
+05/20/2018 17:12:03.621 [14032]: ngen returning 0x00000000
+05/20/2018 17:12:03.777 [29196]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install C:\WINDOWS\system32\WinMetadata\Windows.ApplicationModel.winmd /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/20/2018 17:12:04.472 [29196]: All compilation targets are up to date.
+05/20/2018 17:12:04.473 [29196]: ngen returning 0x00000000
+05/20/2018 17:12:04.487 [41624]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.ObjectModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/20/2018 17:12:04.546 [41624]: All compilation targets are up to date.
+05/20/2018 17:12:04.547 [41624]: ngen returning 0x00000000
+05/20/2018 17:12:04.559 [40664]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.Text.Encoding, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/20/2018 17:12:04.818 [40664]: All compilation targets are up to date.
+05/20/2018 17:12:04.819 [40664]: ngen returning 0x00000000
+05/20/2018 17:12:04.831 [42984]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.Runtime.InteropServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/20/2018 17:12:05.204 [42984]: All compilation targets are up to date.
+05/20/2018 17:12:05.205 [42984]: ngen returning 0x00000000
+05/20/2018 17:12:05.216 [47272]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.Resources.ResourceManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/20/2018 17:12:05.343 [47272]: All compilation targets are up to date.
+05/20/2018 17:12:05.344 [47272]: ngen returning 0x00000000
+05/20/2018 17:12:05.364 [39776]: Command line: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 /NoDependencies /noroot /version:v4.0.30319 /LegacyServiceBehavior 
+05/20/2018 17:12:05.432 [39776]: All compilation targets are up to date.
+05/20/2018 17:12:05.433 [39776]: ngen returning 0x00000000
+05/20/2018 17:12:12.124 [41692]: Exception while parsing log HRESULT(-2146232832)
+05/20/2018 17:12:12.125 [41692]: Exception while parsing log HRESULT(-2146232832)
+05/20/2018 17:12:12.132 [41692]: Exception while parsing log HRESULT(-2146232832)
+05/20/2018 17:12:12.162 [41692]: Exception while parsing log HRESULT(-2146232832)
+05/20/2018 17:12:12.230 [41692]: Exception while parsing log HRESULT(-2146232832)
+05/20/2018 17:12:12.254 [41692]: Exception while parsing log HRESULT(-2146232832)
+05/20/2018 17:12:12.283 [41692]: Exception while parsing log HRESULT(-2146232832)
+05/20/2018 17:12:12.362 [41692]: Exception while parsing log HRESULT(-2146232832)
+05/20/2018 17:12:12.480 [41692]: Exception while parsing log HRESULT(-2146232832)
+05/20/2018 17:12:12.537 [41692]: Exception while parsing log HRESULT(-2146232832)
+05/20/2018 17:12:13.792 [41692]: NGen task completed successfully
+05/20/2018 17:12:13.814 [50520]: Task completed with status 0
+05/20/2018 17:12:14.387 [50520]: Task completed with status 0
+05/20/2018 20:25:35.832 [43732]: Command line: ngen C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\Piko.exe 
+05/20/2018 20:25:36.493 [43732]: 1>    Compiling assembly C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\Piko.exe (CLR v4.0.30319) ...
+05/20/2018 20:25:37.848 [43732]: ngen returning 0x00000000
+05/20/2018 20:25:52.909 [43372]: Command line: ngen /? 
+05/20/2018 20:26:22.571 [40056]: Command line: ngen install C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\Piko.exe 
+05/20/2018 20:26:23.020 [40056]: All compilation targets are up to date.
+05/20/2018 20:26:23.020 [40056]: ngen returning 0x00000000
+05/20/2018 20:32:23.894 [39664]: Command line: C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\ngen\ngen.exe Piko.exe 
+05/20/2018 20:32:24.910 [39664]: Access is denied. (Exception from HRESULT: 0x80070005 (E_ACCESSDENIED))
+05/20/2018 20:32:24.911 [39664]: ngen returning 0xffffffff
+05/20/2018 20:33:11.713 [29180]: Command line: C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\ngen\ngen.exe 
+05/20/2018 20:33:24.767 [25116]: Command line: C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\ngen\ngen.exe Piko.exe 
+05/20/2018 20:33:25.788 [25116]: Access is denied. (Exception from HRESULT: 0x80070005 (E_ACCESSDENIED))
+05/20/2018 20:33:25.789 [25116]: ngen returning 0xffffffff
+05/20/2018 20:34:52.383 [8848]: Command line: C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\ngen\ngen.exe Piko.exe 
+05/20/2018 20:34:52.509 [8848]: ngen returning 0x00000000
+05/20/2018 20:35:09.518 [49972]: Command line: C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\ngen\ngen.exe install Piko.exe 
+05/20/2018 20:35:10.532 [49972]: Access is denied. (Exception from HRESULT: 0x80070005 (E_ACCESSDENIED))
+05/20/2018 20:35:10.533 [49972]: ngen returning 0xffffffff
+05/20/2018 20:35:19.798 [40560]: Command line: C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\ngen\ngen.exe install Piko.exe 
+05/20/2018 20:35:19.951 [40560]: All compilation targets are up to date.
+05/20/2018 20:35:19.951 [40560]: ngen returning 0x00000000
+05/20/2018 21:58:12.834 [43516]: Command line: C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\ngen\ngen.exe install Piko.exe 
+05/20/2018 21:58:14.405 [43516]: 1>    Compiling assembly C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\Piko.exe (CLR v4.0.30319) ...
+05/20/2018 21:58:15.798 [43516]: ngen returning 0x00000000
+06/11/2018 19:50:31.037 [6952]: Command line: C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\ngen\ngen.exe install Piko.exe 
+06/11/2018 19:50:32.262 [6952]: 1>    Compiling assembly C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\Piko.exe (CLR v4.0.30319) ...
+06/11/2018 19:50:33.538 [6952]: ngen returning 0x00000000
+06/11/2018 22:31:36.222 [8480]: Command line: C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\ngen\ngen.exe install Piko.exe 
+06/11/2018 22:31:38.267 [8480]: 1>    Compiling assembly C:\Users\osinachi\Documents\Visual Studio 2017\Projects\Piko\Piko\bin\Debug\Piko.exe (CLR v4.0.30319) ...
+06/11/2018 22:31:39.813 [8480]: ngen returning 0x00000000
