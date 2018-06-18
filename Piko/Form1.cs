@@ -273,6 +273,22 @@ namespace Piko
             pictureViewer1.RotatePicture();
         }
 
-        
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            printDocument1.DocumentName = Text;
+            if(printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.PrinterSettings = printDialog1.PrinterSettings;
+                printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+            //Adjust the size of the image to the page to print the full image without loosing any part of it
+            Rectangle m = e.MarginBounds;
+            e.Graphics.DrawImage(Image.FromFile(pictureViewer1.currentPicture), m);
+        }
     }
 }
