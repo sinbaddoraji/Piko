@@ -12,24 +12,171 @@ namespace Piko
         private Timer zoomTimer = new Timer();
         private string moveDirectory = "";
         private bool zoomOut = true;
-        public Form1() => Initialize();
 
-        private void Initialize()
+        public Form1()
         {
             InitializeComponent();
-             pictureViewer1.CurrentPictureChanged += delegate(PictureViewer sender,EventArgs e) {
+            pictureViewer1.CurrentPictureChanged += delegate (PictureViewer sender, EventArgs e)
+            {
                 Text = sender.currentPicture;
                 textBox1.Focus();
             };
-            
-            centralizePanel.Tick += delegate {panel3.Left = (panel2.ClientSize.Width - panel3.Width) / 2;};
+
+            centralizePanel.Tick += delegate { panel3.Left = (panel2.ClientSize.Width - panel3.Width) / 2; };
             centralizePanel.Start();
 
             var args = Environment.GetCommandLineArgs();
-            if(args.Length > 1) pictureViewer1.SetImage(args[1], false);
+            if (args.Length > 1) pictureViewer1.SetImage(args[1], false);
 
             zoomTimer.Tick += Zoom;
         }
+
+        
+        #region Zoom
+
+        private void Button1_MouseDown(object sender, MouseEventArgs e) => StartZoom(false);
+
+        private void Button10_MouseDown(object sender, MouseEventArgs e) => StartZoom(true);
+
+        private void StopZoom(object sender, MouseEventArgs e) => zoomTimer.Stop();
+        
+        private void StartZoom(bool z)
+        {
+            zoomOut = z;
+            zoomTimer.Start();
+        }
+
+        private void Zoom(object sender, EventArgs e)
+        {
+            var multiplier = zoomOut ? 0.9 : 1.1;
+
+            Image MyImage = pictureViewer1.Image;
+
+            Bitmap MyBitMap = new Bitmap(MyImage, Convert.ToInt32(MyImage.Width * multiplier),
+                Convert.ToInt32(MyImage.Height * multiplier));
+
+            Graphics Graphic = Graphics.FromImage(MyBitMap);
+
+            Graphic.InterpolationMode = InterpolationMode.High;
+
+            pictureViewer1.Image = MyBitMap;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pictureViewer1.ResetZoom();
+                textBox1.Focus();
+            }
+            catch { }
+        }
+
+        #endregion
+       
+        #region Slide Show
+
+        private void PlayButtonSwitch(bool fromPlay)
+        {
+            if (fromPlay)
+            {
+                button7.Hide();
+                button8.Show();
+            }
+            else
+            {
+                button7.Show();
+                button8.Hide();
+            }
+        }
+
+        private void PlaySlideSow(object sender, EventArgs e)
+        {
+            var s = new SetSpeed();
+            if (s.ShowDialog(button7) != DialogResult.OK || pictureViewer1.currentPicture == "") return;
+            playSpeed.Interval = s.Speed;
+            PlayButtonSwitch(true);
+            playSpeed.Start();
+        }
+
+        private void PauseSlideShow(object sender, EventArgs e)
+        {
+            playSpeed.Stop();
+            PlayButtonSwitch(false);
+        }
+
+        #endregion
+
+        #region Extra Functionality
+
+        private void Form1_Resize(object sender, EventArgs e) => panel3.Left = Width / 2;
+
+        private void MoveImage(object sender, EventArgs e) => MoveFileCopy();
+
+        private void MoveFileCopy()
+        {
+            try
+            {
+                if (moveDirectory != "") goto CheckExists;
+
+                if (folderBrowserDialog1.ShowDialog() == DialogResult.OK) moveDirectory = folderBrowserDialog1.SelectedPath;
+                else return;
+
+                CheckExists:
+                var newFile = moveDirectory + @"\" + new FileInfo(Text).Name;
+                if (!File.Exists(newFile)) goto StartSave;
+
+                var message = MessageBox.Show(this, "File exists in the destination already", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                switch (message) { case DialogResult.Yes: pictureViewer1.Image.Save(newFile); break; default: return; }
+
+                StartSave:
+                pictureViewer1.Image.Save(newFile);
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+
+        }
+
+        private void ChangeDestinationDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+                moveDirectory = folderBrowserDialog1.SelectedPath;
+        }
+
+        private void PictureViewer1_PicturesUpdated_1(PictureViewer sender, EventArgs e)
+        {
+            dToolStripMenuItem.DropDownItems.Clear();
+            dToolStripMenuItem.DropDownItems.AddRange(pictureViewer1.pictureItems.DropDownItems);
+        }
+
+        private void DoPrintImage(object sender, EventArgs e)
+        {
+            if (printDialog1.ShowDialog() != DialogResult.OK) return;
+
+            printDocument1.PrinterSettings = printDialog1.PrinterSettings;
+            printDocument1.DocumentName = Text;
+            printDocument1.Print();
+        }
+
+        private void PrintDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            //Adjust the size of the image to the page to print the full image without loosing any part of it
+            e.Graphics.DrawImage(Image.FromFile(pictureViewer1.currentPicture), e.MarginBounds);
+        }
+
+        #endregion
+
+        #region Image Manipulation
+
+        private void NextPicture(object sender, EventArgs e) => pictureViewer1.NextPicture();
+
+        private void PreviousPicture(object sender, EventArgs e) => pictureViewer1.PreviousPicture();
+
+        private void RotatePicture(object sender, EventArgs e) => pictureViewer1.RotatePicture(); 
+
+        private void RotateImage(object sender, EventArgs e) => pictureViewer1.RotatePicture();
 
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -45,10 +192,12 @@ namespace Piko
                 case Keys.Down:
                     gotoNextImage.Start();
                     break;
+
                 case Keys.Right:
                 case Keys.Up:
                     gotoPreviousImage.Start();
                     break;
+
                 default:
                     e.Handled = true;
                     break;
@@ -57,8 +206,8 @@ namespace Piko
 
         private void TextBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            gotoPreviousImage.Stop();
-            gotoNextImage.Stop();
+            if(gotoPreviousImage.Enabled)gotoPreviousImage.Stop();
+            if(gotoNextImage.Enabled)gotoNextImage.Stop();
         }
 
         private void PictureViewer1_Resize(object sender, EventArgs e)
@@ -67,157 +216,19 @@ namespace Piko
             pictureViewer1.PreviousPicture();
         }
 
-        private void Form1_Resize(object sender, EventArgs e) => panel3.Left = Width / 2;
-
-        private void Button1_MouseDown(object sender, MouseEventArgs e) => StartZoom(false);
-        private void Button10_MouseDown(object sender, MouseEventArgs e) => StartZoom(true);
-
-        private void StopZoom(object sender, MouseEventArgs e) => zoomTimer.Stop();
-
-        
-        private void StartZoom(bool z)
-        {
-            zoomOut = z;
-            zoomTimer.Start();
-        }
-
-        
-        private void Zoom(object sender, EventArgs e)
-        {
-            var multiplier = zoomOut ? 0.9 : 1.1;
-
-            Image MyImage = pictureViewer1.Image;
-
-            Bitmap MyBitMap =  new Bitmap(MyImage, Convert.ToInt32(MyImage.Width * multiplier),
-                Convert.ToInt32(MyImage.Height * multiplier));
-
-            Graphics Graphic = Graphics.FromImage(MyBitMap);
-
-            Graphic.InterpolationMode = InterpolationMode.High;
-
-            pictureViewer1.Image = MyBitMap;
-        }
-        
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                pictureViewer1.ResetZoom();
-                textBox1.Focus();
-            }
-            catch { }
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
-            try
-            {
-                pictureViewer1.PreviousPicture();
-                textBox1.Focus();
-            }
-            catch { }
+            pictureViewer1.PreviousPicture();
+            textBox1.Focus();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Button5_Click(object sender, EventArgs e)
         {
-            try
-            {
-                pictureViewer1.NextPicture();
-                textBox1.Focus();
-            }
-            catch { }
-        }
-        
-        private void button6_Click(object sender, EventArgs e)
-        {
-            pictureViewer1.RotatePicture();
+           pictureViewer1.NextPicture();
+           textBox1.Focus();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            var s = new SetSpeed();
-            if (s.ShowDialog(button7) != DialogResult.OK || pictureViewer1.currentPicture == "") return;
-            playSpeed.Interval = (int)(1000 * s.Speed);
-            playSpeed.Start();
-            button7.Hide();
-            button8.Show();
-        }
+        #endregion
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            playSpeed.Stop();
-            button7.Show();
-            button8.Hide();
-        }
-
-        private void NextPicture(object sender, EventArgs e) => pictureViewer1.NextPicture();
-
-        private void PreviousPicture(object sender, EventArgs e) => pictureViewer1.PreviousPicture();
-
-        private void RotatePicture(object sender, EventArgs e) => pictureViewer1.RotatePicture();
-
-        private void Button9_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                MoveFileCopy();
-            }
-            catch { MessageBox.Show("Error"); }
-        }
-
-        private void MoveFileCopy()
-        {
-            if (moveDirectory != "") goto CheckExists;
-
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK) { moveDirectory = folderBrowserDialog1.SelectedPath; }
-            else { return; }
-
-            CheckExists:
-            var newFile = moveDirectory + @"\" + new FileInfo(Text).Name;
-            if (!File.Exists(newFile)) goto StartSave;
-
-            var message = MessageBox.Show(this, "File exists in the destination already", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            switch (message) { case DialogResult.Yes: pictureViewer1.Image.Save(newFile); break; default: return; }
-
-            StartSave:
-            pictureViewer1.Image.Save(newFile);
-        }
-
-        private void ChangeDestinationDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK) 
-                moveDirectory = folderBrowserDialog1.SelectedPath;
-        }
-        
-        private void pictureViewer1_PicturesUpdated_1(PictureViewer sender, EventArgs e)
-        {
-            try
-            {
-                dToolStripMenuItem.DropDownItems.Clear();
-                dToolStripMenuItem.DropDownItems.AddRange(pictureViewer1.pictureItems.DropDownItems);
-            }
-            catch (Exception)
-            {
-            }
-            
-        }
-
-        
-
-        private void Button6_Click_1(object sender, EventArgs e)
-        {
-            printDocument1.DocumentName = Text;
-            if(printDialog1.ShowDialog() != DialogResult.OK) return;
-            printDocument1.PrinterSettings = printDialog1.PrinterSettings;
-            printDocument1.Print();
-        }
-
-        private void PrintDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            //Adjust the size of the image to the page to print the full image without loosing any part of it
-            Rectangle m = e.MarginBounds;
-            e.Graphics.DrawImage(Image.FromFile(pictureViewer1.currentPicture), m);
-        }
     }
 }

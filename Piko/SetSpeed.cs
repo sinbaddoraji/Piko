@@ -5,13 +5,18 @@ namespace Piko
 {
     public partial class SetSpeed : Form
     {
-        public double Speed = 1;
+        private int speed = 1;
+        public int Speed
+        {
+            get => 1000 * speed;
+            set => speed = value;
+        }
 
         public SetSpeed() => InitializeComponent();
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Speed = double.Parse(textBox1.Text);
+            Speed = int.Parse(textBox1.Text);
             Close();
         }
 

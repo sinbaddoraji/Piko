@@ -156,7 +156,7 @@ namespace Piko
             this.button6.TabIndex = 17;
             this.button6.Text = "Print";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.Button6_Click_1);
+            this.button6.Click += new System.EventHandler(this.DoPrintImage);
             // 
             // contextMenuStrip1
             // 
@@ -223,7 +223,7 @@ namespace Piko
             this.button5.Size = new System.Drawing.Size(43, 56);
             this.button5.TabIndex = 9;
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // button7
             // 
@@ -236,7 +236,7 @@ namespace Piko
             this.button7.Size = new System.Drawing.Size(43, 51);
             this.button7.TabIndex = 11;
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // button4
             // 
@@ -264,7 +264,7 @@ namespace Piko
             this.button8.Size = new System.Drawing.Size(43, 51);
             this.button8.TabIndex = 12;
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.Click += new System.EventHandler(this.PauseSlideShow);
             // 
             // button9
             // 
@@ -276,7 +276,7 @@ namespace Piko
             this.button9.TabIndex = 15;
             this.button9.Text = "Move";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.Button9_Click);
+            this.button9.Click += new System.EventHandler(this.MoveImage);
             // 
             // gotoPreviousImage
             // 
@@ -319,7 +319,7 @@ namespace Piko
             this.pictureViewer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureViewer1.TabIndex = 14;
             this.pictureViewer1.TabStop = false;
-            this.pictureViewer1.PicturesUpdated += new Piko.PictureViewer.PictureUpdate(this.pictureViewer1_PicturesUpdated_1);
+            this.pictureViewer1.PicturesUpdated += new Piko.PictureViewer.PictureUpdate(this.PictureViewer1_PicturesUpdated_1);
             // 
             // Form1
             // 
