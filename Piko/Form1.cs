@@ -8,51 +8,46 @@ namespace Piko
 {
     public partial class Form1 : Form
     {
+        private Timer centralizePanel = new Timer();
+        private Timer zoomTimer = new Timer();
         private string moveDirectory = "";
-
+        private bool zoomOut = true;
         public Form1() => Initialize();
 
         private void Initialize()
         {
             InitializeComponent();
-            pictureViewer1.PicturesUpdated += PictureViewer1_PicturesUpdated;
-            pictureViewer1.CurrentPictureChanged += PictureViewer1_CurrentPictureChanged;
-            timer4.Start();
-            try
-            {
-                pictureViewer1.SetImage(Environment.GetCommandLineArgs()[1], false);
-            }
-            catch (Exception)
-            {
-            }
+             pictureViewer1.CurrentPictureChanged += delegate(PictureViewer sender,EventArgs e) {
+                Text = sender.currentPicture;
+                textBox1.Focus();
+            };
+            
+            centralizePanel.Tick += delegate {panel3.Left = (panel2.ClientSize.Width - panel3.Width) / 2;};
+            centralizePanel.Start();
+
+            var args = Environment.GetCommandLineArgs();
+            if(args.Length > 1) pictureViewer1.SetImage(args[1], false);
+
+            zoomTimer.Tick += Zoom;
         }
 
-        private void PictureViewer1_CurrentPictureChanged(PictureViewer sender, EventArgs e)
-        {
-            Text = sender.currentPicture;
-            textBox1.Focus();
-        }
-
-        private void PictureViewer1_PicturesUpdated(PictureViewer sender, EventArgs e)
-        {
-           
-        }
-
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pictureViewer1.OpenImage();
             dToolStripMenuItem = pictureViewer1.pictureItems;
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void TextBox1_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
                 case Keys.Left:
-                    timer6.Start();
+                case Keys.Down:
+                    gotoNextImage.Start();
                     break;
                 case Keys.Right:
-                    timer5.Start();
+                case Keys.Up:
+                    gotoPreviousImage.Start();
                     break;
                 default:
                     e.Handled = true;
@@ -60,41 +55,40 @@ namespace Piko
             }
         }
 
-        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        private void TextBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            timer5.Stop();
-            timer6.Stop();
+            gotoPreviousImage.Stop();
+            gotoNextImage.Stop();
         }
 
-        private void pictureViewer1_Resize(object sender, EventArgs e)
+        private void PictureViewer1_Resize(object sender, EventArgs e)
         {
             pictureViewer1.NextPicture();
             pictureViewer1.PreviousPicture();
-          
         }
 
-        private void Form1_Resize(object sender, EventArgs e)
-        {
-                panel3.Left = Width / 2;
-        }
+        private void Form1_Resize(object sender, EventArgs e) => panel3.Left = Width / 2;
 
-        private void button1_MouseDown(object sender, MouseEventArgs e)
-        {
-            timer1.Start();
-        }
+        private void Button1_MouseDown(object sender, MouseEventArgs e) => StartZoom(false);
+        private void Button10_MouseDown(object sender, MouseEventArgs e) => StartZoom(true);
 
-        private void button1_MouseUp(object sender, MouseEventArgs e)
-        {
-            timer1.Stop();
-        }
+        private void StopZoom(object sender, MouseEventArgs e) => zoomTimer.Stop();
+
         
-        private void timer1_Tick(object sender, EventArgs e)
+        private void StartZoom(bool z)
         {
-            var multiplier = 1.1;
+            zoomOut = z;
+            zoomTimer.Start();
+        }
+
+        
+        private void Zoom(object sender, EventArgs e)
+        {
+            var multiplier = zoomOut ? 0.9 : 1.1;
 
             Image MyImage = pictureViewer1.Image;
 
-            Bitmap MyBitMap = new Bitmap(MyImage, Convert.ToInt32(MyImage.Width * multiplier),
+            Bitmap MyBitMap =  new Bitmap(MyImage, Convert.ToInt32(MyImage.Width * multiplier),
                 Convert.ToInt32(MyImage.Height * multiplier));
 
             Graphics Graphic = Graphics.FromImage(MyBitMap);
@@ -103,32 +97,7 @@ namespace Piko
 
             pictureViewer1.Image = MyBitMap;
         }
-
-        private void button10_MouseDown(object sender, MouseEventArgs e)
-        {
-            timer2.Start();
-        }
-
-        private void button10_MouseUp(object sender, MouseEventArgs e)
-        {
-            timer2.Stop();
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            var multiplier = 1.1;
-
-            Image MyImage = pictureViewer1.Image;
-
-            Bitmap MyBitMap = new Bitmap(MyImage, Convert.ToInt32(MyImage.Width / multiplier),
-                Convert.ToInt32(MyImage.Height / multiplier));
-
-            Graphics Graphic = Graphics.FromImage(MyBitMap);
-
-            Graphic.InterpolationMode = InterpolationMode.High;
-
-            pictureViewer1.Image = MyBitMap;
-        }
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -159,11 +128,7 @@ namespace Piko
             }
             catch { }
         }
-
-        private void pictureViewer1_SizeChanged(object sender, EventArgs e)
-        {
-        }
-
+        
         private void button6_Click(object sender, EventArgs e)
         {
             pictureViewer1.RotatePicture();
@@ -173,38 +138,24 @@ namespace Piko
         {
             var s = new SetSpeed();
             if (s.ShowDialog(button7) != DialogResult.OK || pictureViewer1.currentPicture == "") return;
-            timer3.Interval = (int)(1000 * s.Speed);
-            timer3.Start();
+            playSpeed.Interval = (int)(1000 * s.Speed);
+            playSpeed.Start();
             button7.Hide();
             button8.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            timer3.Stop();
+            playSpeed.Stop();
             button7.Show();
             button8.Hide();
         }
 
-        private void timer3_Tick(object sender, EventArgs e)
-        {
-            pictureViewer1.NextPicture();
-        }
+        private void NextPicture(object sender, EventArgs e) => pictureViewer1.NextPicture();
 
-        private void timer4_Tick(object sender, EventArgs e)
-        {
-            panel3.Left = (panel2.ClientSize.Width - panel3.Width) / 2;
-        }
+        private void PreviousPicture(object sender, EventArgs e) => pictureViewer1.PreviousPicture();
 
-        private void timer5_Tick(object sender, EventArgs e)
-        {
-            pictureViewer1.NextPicture();
-        }
-
-        private void timer6_Tick(object sender, EventArgs e)
-        {
-            pictureViewer1.PreviousPicture();
-        }
+        private void RotatePicture(object sender, EventArgs e) => pictureViewer1.RotatePicture();
 
         private void Button9_Click(object sender, EventArgs e)
         {
@@ -233,28 +184,12 @@ namespace Piko
             pictureViewer1.Image.Save(newFile);
         }
 
-        private void changeDestinationDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ChangeDestinationDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK) moveDirectory = folderBrowserDialog1.SelectedPath;
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK) 
+                moveDirectory = folderBrowserDialog1.SelectedPath;
         }
-
-        private void pictureViewer1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         
-
-        private void button10_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
         private void pictureViewer1_PicturesUpdated_1(PictureViewer sender, EventArgs e)
         {
             try
@@ -268,24 +203,18 @@ namespace Piko
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            pictureViewer1.RotatePicture();
-        }
+        
 
-        private void button6_Click_1(object sender, EventArgs e)
+        private void Button6_Click_1(object sender, EventArgs e)
         {
             printDocument1.DocumentName = Text;
-            if(printDialog1.ShowDialog() == DialogResult.OK)
-            {
-                printDocument1.PrinterSettings = printDialog1.PrinterSettings;
-                printDocument1.Print();
-            }
+            if(printDialog1.ShowDialog() != DialogResult.OK) return;
+            printDocument1.PrinterSettings = printDialog1.PrinterSettings;
+            printDocument1.Print();
         }
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void PrintDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-
             //Adjust the size of the image to the page to print the full image without loosing any part of it
             Rectangle m = e.MarginBounds;
             e.Graphics.DrawImage(Image.FromFile(pictureViewer1.currentPicture), m);
