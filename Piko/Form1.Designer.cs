@@ -58,7 +58,7 @@ namespace Piko
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.pictureViewer1 = new Piko.PictureViewer();
+            this.pictureViewer1 = new Piko.PictureViewer(ref dToolStripMenuItem);
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -236,7 +236,7 @@ namespace Piko
             this.button7.Size = new System.Drawing.Size(43, 51);
             this.button7.TabIndex = 11;
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.Button7_Click);
+            this.button7.Click += new System.EventHandler(this.PlaySlideShow);
             // 
             // button4
             // 
@@ -319,7 +319,6 @@ namespace Piko
             this.pictureViewer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureViewer1.TabIndex = 14;
             this.pictureViewer1.TabStop = false;
-            this.pictureViewer1.PicturesUpdated += new Piko.PictureViewer.PictureUpdate(this.PictureViewer1_PicturesUpdated_1);
             // 
             // Form1
             // 
@@ -335,6 +334,7 @@ namespace Piko
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Piko";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

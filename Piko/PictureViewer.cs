@@ -5,6 +5,8 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Piko
@@ -29,27 +31,24 @@ namespace Piko
             set
             {
                 currentPicture = value;
-                try
-                {
-                    CurrentPictureChanged(this, new EventArgs());
-                }
-                catch (Exception)
-                {
-                }
+                CurrentPictureChanged(this, new EventArgs());
             }
         }
 
-        private readonly OpenFileDialog openFile;
+        private readonly OpenFileDialog openFile = new OpenFileDialog()
+        {
+            Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png *.gif) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png; *.gif; | *.* |*.*"
+        };
 
         private int zoom = 100;
 
         public ToolStripMenuItem pictureItems;
 
-        public PictureViewer()
+        public PictureViewer(ref ToolStripMenuItem t)
         {
+            pictureItems = t;
             SizeMode = PictureBoxSizeMode.CenterImage;
-            openFile = new OpenFileDialog();
-            this.SizeChanged += PictureViewer_SizeChanged;
+            SizeChanged += PictureViewer_SizeChanged;
         }
 
         private void PictureViewer_SizeChanged(object sender, EventArgs e)
@@ -59,21 +58,20 @@ namespace Piko
 
         private void ListImages()
         {
-            var items = new ToolStripMenuItem();
-            foreach (var item in pictures)
+            var p = new List<ToolStripMenuItem>();
+
+            for(int i = 0; i < pictures.Count; i++)
             {
-                var a = new ToolStripMenuItem
+                ToolStripMenuItem pn = new ToolStripMenuItem
                 {
-                    Name = item
+                    Name = pictures[i],
+                    Text = new FileInfo(pictures[i]).Name
                 };
-                a.Text = new FileInfo(a.Name).Name;
-                a.Click += delegate
-                {
-                    SetImage(a.Name, false);
-                };
-                items.DropDownItems.Add(a);
+                pn.Click += delegate{ SetImage(pn.Name, false); };
+                p.Add(pn);
             }
-            pictureItems = items;
+            pictureItems.DropDownItems.Clear();
+            pictureItems.DropDown.Items.AddRange(p.ToArray());
         }
 
         public void RefreshPicture()
@@ -94,9 +92,9 @@ namespace Piko
         {
             //Get index of current picture and increase value by one
             //set current image to the image of this new index value
-            var currentPictureIndex = pictures.IndexOf(currentPicture);
             try
             {
+                var currentPictureIndex = pictures.IndexOf(currentPicture);
                 SetImage(pictures[currentPictureIndex + 1], true);
             }
             catch (Exception)
@@ -109,9 +107,9 @@ namespace Piko
         {
             //Get index of current picture and reduce value by one
             //set current image to the image of this new index value
-            var currentPictureIndex = pictures.IndexOf(currentPicture);
             try
             {
+                var currentPictureIndex = pictures.IndexOf(currentPicture);
                 SetImage(pictures[currentPictureIndex - 1], true);
             }
             catch (Exception)
@@ -128,22 +126,37 @@ namespace Piko
             
             Current_Picture = imageToBeDisplayed;
             ScaleImage(false);
-            Timer addPics = new Timer() { Interval = 1};
-            addPics.Tick += delegate {
+
+            Action endThread = new Action(delegate{ });
+            Task t = new Task(delegate{ 
                 var imageParent = new DirectoryInfo(imageToBeDisplayed).Parent;
 
                 if (imageParent != null) pictures = Directory.GetFiles(imageParent.FullName).Where(IsImage).ToList();
-                //ScaleImage(false);
-                ListImages();
+
+                Invoke((MethodInvoker)delegate{ ListImages(); });
+                
                 PicturesUpdated?.Invoke(this, new EventArgs());
-                addPics.Stop();
-            };
+            });
+            
             if (same == false)
             {
-                addPics.Start();
+                t.Start();
+                var count = new System.Windows.Forms.Timer
+                {
+                    Interval = 2500
+                };
+                count.Tick += delegate
+                {
+                    if (!t.IsCompleted)
+                    {
+                        var m = MessageBox.Show(this,"Do you want to continue loading other image data?",
+                        "Pictures in directory taking too long to load",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                        if(m == DialogResult.No) t.Dispose();
+                    }
+                    count.Stop();
+                };
+                count.Start();
             }
-
-            
         }
 
         private static bool IsImage(string image)
@@ -153,7 +166,7 @@ namespace Piko
                 Image.FromFile(image);
                 return true;
             }
-            catch (Exception)
+            catch 
             {
                 return false;
             }
@@ -162,9 +175,7 @@ namespace Piko
         public void OpenImage()
         {
             if (openFile.ShowDialog() == DialogResult.OK)
-            {
                 SetImage(openFile.FileName, false);
-            }
         }
 
         private void Zoom(int zoomFactor)
@@ -173,20 +184,11 @@ namespace Piko
             ScaleImage(false);
         }
 
-        public void ZoomUp()
-        {
-            Zoom(zoom + 50);
-        }
+        public void ZoomUp() => Zoom(zoom + 50);
 
-        public void ZoomDown()
-        {
-            Zoom(zoom - 50);
-        }
+        public void ZoomDown() => Zoom(zoom - 50);
 
-        public void ResetZoom()
-        {
-            Zoom(100);
-        }
+        public void ResetZoom() => Zoom(100);
 
         private void ScaleImage(bool rotate)
         {
